@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+   font-family: Montserrat;
+}
+
+.main-title {
+  max-width: 846px;
+  height: 78px;
+  margin: 220px auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 78px;
+  color: #515076;
+}
+.page {
+  margin: 408px auto;
+width: 1110px;
+min-height: 1191px;
+}
+.catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 45px;
+}
+.cards__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+}
+.cards__bottom {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3px;
+  max-width: 340px;
+  min-height: 573px;
+  background: #F7F7FA;
+  padding: 25px;
+}
+.card__image {
+  min-height: 245px;
+}
+.card__spec {
+  margin: 13px 0;
+  max-width: 171px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #A5A3B9;
+}
+.card__name {
+  margin: 0px 0px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  color: #515076;
+}
+.card__discription {
+  margin: 5px 0px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: #515076;
+}
+.card__list-header {
+  margin: 10px 0px 6px;
+  color: #515076;
+}
+.card__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 3px;
+  padding-left: 16px;
+  margin: 0;
+}
+.card__list-child {
+  margin: 3px 0;
+  height: 18px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+.card-price {
+  margin: 40px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  color: #515076;
+}
+.card-price__leftside {
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+color: #515076;
+}
+.card-price__rightside {
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+color: #515076;
+}
+.background {
+  position: absolute;
+  max-width: 790px;
+  min-height: 697px;
+  left: 85px;
+  top: 0px;
+  z-index: -1;
+}
+
+
+
+
+
