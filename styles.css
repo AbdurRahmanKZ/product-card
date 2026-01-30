@@ -5,7 +5,6 @@ body {
   margin: 0;
    font-family: Montserrat;
 }
-
 .main-title {
   max-width: 846px;
   height: 78px;
@@ -127,8 +126,3 @@ color: #515076;
   top: 0px;
   z-index: -1;
 }
-
-
-
-
-
