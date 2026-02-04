@@ -7,5 +7,4 @@ mainTitle.addEventListener('mouseover', () => {
 
 colorRedTitleButton.addEventListener('click', () => {
   mainTitle.classList.toggle('red');
-
 });
