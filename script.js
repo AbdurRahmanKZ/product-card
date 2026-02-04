@@ -9,5 +9,5 @@ mainTitle.addEventListener('mouseover', () => {
 
 // Создание слушателя событий для кнопки с покраской заголовка в красный с classList.toggle
 toggleRedTittleColor.addEventListener('click', () => {
-  mainTitle.classList.toggle('red');
+  toggleRedTittleColor.classList.toggle('red');
 });
