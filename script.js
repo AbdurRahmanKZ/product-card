@@ -1,6 +1,6 @@
 // Объявление переменных и присвоение html элементов
 const mainTitle = document.querySelector('.main-title');
-const titleColorToggleBtn = document.getElementById('title-color-toggle-button');
+const buttonColorToggleBtn = document.getElementById('button-color-toggle-button');
 
 // Создание слушателя событий для заголовка с выводом его в консоль
 mainTitle.addEventListener('mouseover', () => {
@@ -8,6 +8,6 @@ mainTitle.addEventListener('mouseover', () => {
 });
 
 // Создание слушателя событий для кнопки с покраской заголовка в красный с classList.toggle
-titleColorToggleBtn.addEventListener('click', () => {
-  titleColorToggleBtn.classList.toggle('red');
+buttonColorToggleBtn.addEventListener('click', () => {
+  buttonColorToggleBtn.classList.toggle('red');
 });
