@@ -15,6 +15,16 @@ body {
   line-height: 78px;
   color: #515076;
 }
+#toggle-red-title-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  padding: 10px;
+  background-color: #dad8f3;
+  border-radius: 5px;
+  text-align: center;
+}
 .page {
   margin: 408px auto;
 width: 1110px;
@@ -125,4 +135,7 @@ color: #515076;
   left: 85px;
   top: 0px;
   z-index: -1;
+}
+.red {
+  color: #ff0000;
 }
