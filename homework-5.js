@@ -8,7 +8,7 @@ function checkSpeed (speed) {  //#4 создание функции котора
   } else if (speed === LIGHT_SPEED) {
         console.log("Скорость света");
   } else {
-    console.log("Субсветовая  скорость");
+    console.log("Субсветовая  скорость")
   }
 };
 let bread = "хлеб";  //#5 создание переменной продукта
