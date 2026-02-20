@@ -25,10 +25,12 @@ function ensureMaxSpeed(car) {
     car.maxSpeed = 180;
   }
 }
+ensureMaxSpeed(car);
 //#6 создание функции которая выдает значение свойства объекта
 function getProp(object, key) {
   return object[key];
 }
+getProp(car, 'mark');
 
 //#7 создание массива с названиями продуктов
 const fruites = [
