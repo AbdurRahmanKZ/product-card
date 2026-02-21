@@ -20,20 +20,20 @@ const car = {
 car.owner = person;
 
 //#5 создание функций которая убеждается что есть свойство в maxSpeed в машине
-function ensureMaxSpeed(car) {
+function setMaxSpeed(car) {
   if (!('maxSpeed' in car)) {
     car.maxSpeed = 180;
   }
 }
-ensureMaxSpeed(car);
+setMaxSpeed(car);
 //#6 создание функции которая выдает значение свойства объекта
-function getProp(object, key) {
+function getPropObj(object, key) {
   return object[key];
 }
-getProp(car, 'mark');
+getPropObj(car, 'mark');
 
 //#7 создание массива с названиями продуктов
-const fruites = [
+const fruits = [
   'apple',
   'orange',
   'pineapple',
@@ -42,47 +42,55 @@ const fruites = [
 ];
 //#8 создание массива книг и затем дабавление еще одной в конец 
 const booksClassic = [
-  { author: 'Margaret Tetcher',
+  {
+    author: 'Margaret Tetcher',
     producedYear: 1987,
     titleColor: 'yellow',
     jenr: 'Roman'
   },
-  { author: 'Marko Polo',
+  {
+    author: 'Marko Polo',
     producedYear: 1942,
     titleColor: 'black',
     jenr: 'Horror'
   },
-  { author: 'Deil Karnegy',
+  {
+    author: 'Deil Karnegy',
     producedYear: 1998,
     titleColor: 'blue',
     jenr: 'Psychology'
   },
-  { author: 'Jeorge Oruel',
+  {
+    author: 'Jeorge Oruel',
     producedYear: 1912,
     titleColor: 'yellow',
     jenr: 'Action'
   }
 ];
-booksClassic.push({ author: 'Capital in 21th century',
-    producedYear: 2000,
-    titleColor: 'red',
-    jenr: 'Finance'
+booksClassic.push({
+  author: 'Capital in 21th century',
+  producedYear: 2000,
+  titleColor: 'red',
+  jenr: 'Finance'
 });
 //#9 создание массива с книгами фентези жанра и затем слияние их в одном новом массиве
 const booksFantasy = [
-  { author: 'Marveleo',
+  {
+    author: 'Marveleo',
     name: 'Whoever Who',
     producedYear: 2002,
     titleColor: 'red',
     jenr: 'Action'
   },
-  { author: 'Uncharted man',
+  {
+    author: 'Uncharted man',
     name: 'In car on the Mountain',
     producedYear: 2005,
     titleColor: 'blue sky',
     jenr: 'Action'
   },
-  { author: 'Killer John',
+  {
+    author: 'Killer John',
     name: 'Namye',
     producedYear: 2008,
     titleColor: 'redye',
@@ -93,8 +101,8 @@ const booksAll = [...booksClassic, ...booksFantasy];
 //#10 создание нового массива книг с дабавление свойства isRare которая проверяет дату выхода книги если раньше 2000 года то редкий
 const booksWithRare = booksAll.map(book => {
   if (book.producedYear < 2000) {
-    return { ...book, isRare: true};
-    } else {
-      return { ...book, isRare: false};
-    }
+    return { ...book, isRare: true };
+  } else {
+    return { ...book, isRare: false };
+  }
 });
