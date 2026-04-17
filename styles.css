@@ -27,14 +27,18 @@ body {
 }
 .page {
   margin: 408px auto;
-width: 1110px;
-min-height: 1191px;
+ width: 1110px;
+  min-height: 1191px;
 }
 .catalog {
+  width: 1110px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
   gap: 45px;
+  margin-bottom: 116px;
+  margin-top: 110px;
 }
 .cards__top {
   display: flex;
@@ -47,13 +51,9 @@ min-height: 1191px;
   gap: 45px;
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 3px;
-  max-width: 340px;
-  min-height: 573px;
-  background: #F7F7FA;
+  width: 340px;
+  height: 573px;
+  background-color: #F7F7FA;
   padding: 25px;
 }
 .card__image {
