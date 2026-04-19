@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <h1 class="main-title">Выбери свой продукт</h1>
   <button id="button-color-toggle-button">Покрась главный заголовок в красный цвет</button>
@@ -20,7 +22,7 @@
           <img class="card__image" src="" alt="">
           <p class="card__spec"></p>
           <h3 class="card__name"></h3>
-          <p class="card__description"></p>     
+          <p class="card__description"></p>
           <p class="card__list-header">Состав:</p>
           <ul class="card__list"></ul>
           <div class="card-price">
@@ -29,40 +31,36 @@
           </div>
         </section>
       </template>
-      <footer class="footer">
-        <div class="footer-conteiner">
-          <div class="footer-top">
-            <div class="footer-top-left-bar">
-              <h3 class="footer-top-left-bar-title">Product Cards</h3>
-              <p class="footer-top-left-bar-text">У нас самые лучшие продукты для кожи!</p>
-              <img class="footer-top-left-bar-img-tg" src="/images/telegram-icon.png" alt="telegram-icon">
-              <img class="footer-top-left-bar-img-vk" src="/images/vk-icon.png" alt="vk-icon">
-            </div>
-            <div class="footer-top-center-bar">
-              <h3 class="footer-top-center-bar-title">Подпишись на наши акции:</h3>
-              <form action="">
-                <input type="text" id="footer-email-input" name="userEmail" placeholder="Введи Email..." required>
-                <hr class="footer-top-center-bar line">
-                <button class="footer-top-center-bar-input-button"></button>
-              </form>
-            </div>
-            <nav class="footer-top-right-nav-bar">
-              <h3 class="footer-top-right-nav-bar-title">Быстрые ссылки</h3>
-              <ul class="footer-top-right-nav-bar-ul">
-                <a href="" class="footer-top-right-nav-bar-ul-link">Главная</a>
-                <a href="" class="footer-top-right-nav-bar-ul-link">Магазин</a>
-                <a href="" class="footer-top-right-nav-bar-ul-link">Контакты</a>
-              </ul>
-            </nav>
-          </div>
-          <div class="footer-bottom">
-            <hr class="footer-bottom-line">
-            <a class="footer-bottom-link">www.product-cards.com©all right reserve</p>
-          </div>
-        </div>
-      </footer>
     </div>
   </main>
+  <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-top-left-bar">
+          <h3 class="footer-top-left-bar-title">Product Cards</h3>
+          <p class="footer-top-left-bar-text">У нас самые лучшие продукты для кожи!</p>
+          <img class="footer-top-left-bar-img-tg" src="./images/telegram-icon.png" alt="telegram-icon">
+          <img class="footer-top-left-bar-img-vk" src="./images/vk-icon.png" alt="vk-icon">
+        </div>
+        <div class="footer-top-center-bar">
+          <h3 class="footer-top-center-bar-title">Подпишись на наши акции:</h3>
+          <form class="footer-top-center-bar-form">
+            <input class="footer-top-center-bar-input" id="footer-email-input" name="userEmail" placeholder="Введи Email..." required>
+            <hr class="footer-top-center-bar-line">
+            <button class="footer-top-center-bar-input-button">Подписаться</button>
+          </form>
+        </div>
+        <nav class="footer-top-right-nav-bar">
+          <h3 class="footer-top-right-nav-bar-title">Быстрые ссылки</h3>
+          <ul class="footer-top-right-nav-bar-ul">
+            <a href="" class="footer-top-right-nav-bar-ul-link">Главная</a>
+            <a href="" class="footer-top-right-nav-bar-ul-link">Магазин</a>
+            <a href="" class="footer-top-right-nav-bar-ul-link">Контакты</a>
+          </ul>
+        </nav>
+      </div>
+        <hr class="footer-bottom-line">
+        <a class="footer-bottom-link">www.product-cards.com©all right reserve</p>
+  </footer>
   <img src="images/background-flower.png" alt="background-flower" class="background">
   <script src="./script.js"></script>
   <script src="./homework-5.js"></script>
@@ -70,4 +68,5 @@
   <script src="./homework-7.js" type="module"></script>
   <script src="./homework-8.js" type="module"></script>
 </body>
+
 </html>
