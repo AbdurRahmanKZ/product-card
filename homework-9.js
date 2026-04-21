@@ -1,7 +1,16 @@
+const formEmail = document.querySelector(".footer-top-center-bar-form");
 const openRegisterBtn = document.querySelector(".register-button");
 const closeRegisterBtn = document.querySelector(".close-register-button");
 
-
+formEmail.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!formEmail.checkValidity()) {
+    return;
+  }
+  const formData = new FormData(formEmail);
+  const data = Object.fromEntries(formData.entries());
+  console.log(data)
+});
 
 
 

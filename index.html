@@ -14,7 +14,7 @@
 
 <body>
   <h1 class="main-title">Выбери свой продукт</h1>
-  <button id="button-color-toggle-button">Покрась главный заголовок в красный цвет</button>
+  <button id="button-color-toggle-button">Покрась этот заголовок в красный цвет</button>
   <main class="page">
     <div class="catalog">
       <template id="product-card-template">
@@ -38,13 +38,13 @@
         <div class="footer-top-left-bar">
           <h3 class="footer-top-left-bar-title">Product Cards</h3>
           <p class="footer-top-left-bar-text">У нас самые лучшие продукты для кожи!</p>
-          <img class="footer-top-left-bar-img-tg" src="./images/telegram-icon.png" alt="telegram-icon">
-          <img class="footer-top-left-bar-img-vk" src="./images/vk-icon.png" alt="vk-icon">
+          <a href="https://web.telegram.org" target="_blank"><img class="footer-top-left-bar-img-tg" src="./images/telegram-icon.png" alt="telegram-icon"></a>
+          <a href="https://vk.com/" target="_blank"><img class="footer-top-left-bar-img-vk" src="./images/vk-icon.png" alt="vk-icon" href="vk.com"></a>
         </div>
         <div class="footer-top-center-bar">
           <h3 class="footer-top-center-bar-title">Подпишись на наши акции:</h3>
           <form class="footer-top-center-bar-form">
-            <input class="footer-top-center-bar-input" id="footer-email-input" name="userEmail" placeholder="Введи Email..." required>
+            <input class="footer-top-center-bar-input" type ="email" id="footer-email-input" name="userEmail" placeholder="Введи Email..." required>
             <hr class="footer-top-center-bar-line">
             <button class="footer-top-center-bar-input-button">Подписаться</button>
           </form>
@@ -71,10 +71,33 @@
         </svg>
     </div>
     <h3>Регистрация</h3>
-    <label class="modal-label">
-      Имя
-      <input type="text">
-    </label>
+    <form class="modal-form">
+      <label class="modal-label">
+        Имя:
+        <input type="text" id="form-name" required>
+      </label>
+          <label class="modal-label">
+        Фамилия:
+        <input type="text" id="form-surname" required>
+      </label>
+          <label class="modal-label">
+        Дата Рождения:
+        <input type="date" id="form-birthdate" required>
+      </label>
+          <label class="modal-label">
+        Логин:
+        <input type="name" id="form-login" required>
+      </label>
+          <label class="modal-label">
+        Пароль:
+        <input type="name" id="form-password" required>
+      </label>
+          <label class="modal-label">
+        Повторение пароля:
+        <input type="name" id="form-repeat-password" required>
+      </label>
+      <button class="form-button">Зарегестрироваться</button>
+    </form>
   </div>
   <img src="images/background-flower.png" alt="background-flower" class="background">
   <script src="./script.js"></script>
@@ -82,6 +105,7 @@
   <script src="./homework-6.js"></script>
   <script src="./homework-7.js" type="module"></script>
   <script src="./homework-8.js" type="module"></script>
+  <script src="./homework-9.js" type="module"></script>
 </body>
 
 </html>
