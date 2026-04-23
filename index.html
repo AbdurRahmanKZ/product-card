@@ -34,68 +34,71 @@
     </div>
   </main>
   <footer class="footer">
-      <div class="footer-top">
-        <div class="footer-top-left-bar">
-          <h3 class="footer-top-left-bar-title">Product Cards</h3>
-          <p class="footer-top-left-bar-text">У нас самые лучшие продукты для кожи!</p>
-          <a href="https://web.telegram.org" target="_blank"><img class="footer-top-left-bar-img-tg" src="./images/telegram-icon.png" alt="telegram-icon"></a>
-          <a href="https://vk.com/" target="_blank"><img class="footer-top-left-bar-img-vk" src="./images/vk-icon.png" alt="vk-icon" href="vk.com"></a>
-        </div>
-        <div class="footer-top-center-bar">
-          <h3 class="footer-top-center-bar-title">Подпишись на наши акции:</h3>
-          <form class="footer-top-center-bar-form">
-            <input class="footer-top-center-bar-input" type ="email" id="footer-email-input" name="userEmail" placeholder="Введи Email..." required>
-            <hr class="footer-top-center-bar-line">
-            <button class="footer-top-center-bar-input-button">Подписаться</button>
-          </form>
-        </div>
-        <nav class="footer-top-right-nav-bar">
-          <h3 class="footer-top-right-nav-bar-title">Быстрые ссылки</h3>
-          <ul class="footer-top-right-nav-bar-ul">
-            <a href="" class="footer-top-right-nav-bar-ul-link">Главная</a>
-            <a href="" class="footer-top-right-nav-bar-ul-link">Магазин</a>
-            <a href="" class="footer-top-right-nav-bar-ul-link">Контакты</a>
-          </ul>
-        </nav>
+    <div class="footer-top">
+      <div class="footer-top-left-bar">
+        <h3 class="footer-top-left-bar-title">Product Cards</h3>
+        <p class="footer-top-left-bar-text">У нас самые лучшие продукты для кожи!</p>
+        <a href="https://web.telegram.org" target="_blank"><img class="footer-top-left-bar-img-tg"
+            src="./images/telegram-icon.png" alt="telegram-icon"></a>
+        <a href="https://vk.com/" target="_blank"><img class="footer-top-left-bar-img-vk" src="./images/vk-icon.png"
+            alt="vk-icon" href="vk.com"></a>
       </div>
-        <hr class="footer-bottom-line">
-        <a class="footer-bottom-link">www.product-cards.com©all right reserve</p>
+      <div class="footer-top-center-bar">
+        <h3 class="footer-top-center-bar-title">Подпишись на наши акции:</h3>
+        <form class="footer-top-center-bar-form">
+          <input class="footer-top-center-bar-input" type="email" id="footer-email-input" name="userEmail"
+            placeholder="Введи Email..." required>
+          <hr class="footer-top-center-bar-line">
+          <button class="footer-top-center-bar-input-button">Подписаться</button>
+        </form>
+      </div>
+      <nav class="footer-top-right-nav-bar">
+        <h3 class="footer-top-right-nav-bar-title">Быстрые ссылки</h3>
+        <ul class="footer-top-right-nav-bar-ul">
+          <a href="" class="footer-top-right-nav-bar-ul-link">Главная</a>
+          <a href="" class="footer-top-right-nav-bar-ul-link">Магазин</a>
+          <a href="" class="footer-top-right-nav-bar-ul-link">Контакты</a>
+        </ul>
+      </nav>
+    </div>
+    <hr class="footer-bottom-line">
+    <a class="footer-bottom-link">www.product-cards.com©all right reserve</p>
   </footer>
   <div class="overlay"></div>
   <button class="register-button">Регистрация</button>
   <div class="modal">
     <div class="close-register-button">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        <path d="M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
     </div>
-    <h3>Регистрация</h3>
+    <h3 class="modal-title">Регистрация</h3>
     <form class="modal-form">
       <label class="modal-label">
         Имя:
-        <input class="modal-input" type="text" id="form-name" required>
       </label>
-          <label class="modal-label">
+      <input class="modal-input" name="name" type="text" id="form-name" required>
+      <label class="modal-label">
         Фамилия:
-        <input class="modal-input" type="text" id="form-surname" required>
       </label>
-          <label class="modal-label">
+      <input class="modal-input" name="surname" type="text" id="form-surname" required>
+      <label class="modal-label">
         Дата Рождения:
-        <input class="modal-input" type="date" id="form-birthdate" required>
       </label>
-          <label class="modal-label">
+      <input class="modal-input" name="birthdate" type="date" min="1940-01-01" id="form-birthdate" required>
+      <label class="modal-label">
         Логин:
-        <input class="modal-input" type="name" id="form-login" required>
       </label>
-          <label class="modal-label">
+      <input class="modal-input" name="login" type="name" id="form-login" required>
+      <label class="modal-label">
         Пароль:
-        <input class="modal-input" type="name" id="form-password" required>
       </label>
-          <label class="modal-label">
+      <input class="modal-input" name="password" type="name" id="form-password" required>
+      <label class="modal-label">
         Повторение пароля:
-        <input class="modal-input" type="name" id="form-repeat-password" required>
       </label>
+      <input class="modal-input" name="repeatPassword" type="name" id="form-repeat-password" required>
       <button class="form-button">Зарегестрироваться</button>
     </form>
   </div>

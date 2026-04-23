@@ -281,7 +281,18 @@ margin-right: 15px;
   padding: 10px 25px;
   cursor: pointer;
 }
+.close-register-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.modal-title{
+  text-align: center;
+}
 .modal {
+  display: none;
+}
+.modal-showed {
   width: 600px;
   position: fixed;
   top: 50%;
@@ -289,10 +300,34 @@ margin-right: 15px;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  text-align: left;
+  background-color: #d5ff96;
+  border-radius: 10px;
+  padding: 50px;
+  z-index: 11;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .modal-label {
   display: block;
 }
 .modal-input {
+  min-height: 25px;
+  padding: 6px;
   display: block;
+  background: #e9ffc8;
+  border: 1px solid seagreen;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+.form-button {
+  border: none;
+  border-radius: 5px;
+  background: #93f2ff;
+  padding: 9px;
+  align-self: flex-end;
 }
