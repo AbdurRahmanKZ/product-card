@@ -6,6 +6,8 @@ const modal = document.querySelector(".modal");
 const formModal = document.querySelector(".modal-form");
 const modalInput = document.querySelector(".modal-input");
 const birthDateInput = document.getElementById("form-birthdate");
+const inputPassword = document.getElementById("form-password");
+const inputRepeatPassword = document.getElementById("form-repeat-password");
 
 formEmail.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -24,14 +26,24 @@ openRegisterBtn.addEventListener("click", () => {
   modal.classList.add("modal-showed");
   overlay.classList.add("overlay-showed");
 });
+
 formModal.addEventListener("submit", (e) => {
   e.preventDefault();
+  inputPassword.setCustomValidity("");
   if (!formModal.checkValidity()) {
     return;
   }
-  const formData = new FormData(formModal);
-  const obj = Object.fromEntries(formData.entries());
-  console.log(obj);
-  modal.classList.remove("modal-showed");
-  overlay.classList.remove("overlay-showed");
+  if (inputPassword.value === inputRepeatPassword.value && inputPassword.value.length >= 8) {
+    inputPassword.setCustomValidity("");
+    const formData = new FormData(formModal);
+    const obj = Object.fromEntries(formData.entries());
+    console.log(obj);
+
+    modal.classList.remove("modal-showed");
+    overlay.classList.remove("overlay-showed");
+  } else {
+    e.preventDefault();
+    inputPassword.setCustomValidity("Пароли разные или короткие")
+    inputPassword.reportValidity();
+  }
 });
