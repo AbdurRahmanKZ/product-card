@@ -8,6 +8,7 @@ const modalInput = document.querySelector(".modal-input");
 const birthDateInput = document.getElementById("form-birthdate");
 const inputPassword = document.getElementById("form-password");
 const inputRepeatPassword = document.getElementById("form-repeat-password");
+const inputSub = document.querySelector(".footer-top-center-bar-input");
 
 formEmail.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -17,6 +18,7 @@ formEmail.addEventListener("submit", (e) => {
   const formData = new FormData(formEmail);
   const data = Object.fromEntries(formData.entries());
   console.log(data)
+  inputSub.value = "";
 });
 closeRegisterBtn.addEventListener("click", () => {
   modal.classList.remove("modal-showed");
@@ -27,23 +29,36 @@ openRegisterBtn.addEventListener("click", () => {
   overlay.classList.add("overlay-showed");
 });
 
+let user;
+
 formModal.addEventListener("submit", (e) => {
   e.preventDefault();
   inputPassword.setCustomValidity("");
   if (!formModal.checkValidity()) {
+    inputPassword.reportValidity();
     return;
   }
-  if (inputPassword.value === inputRepeatPassword.value && inputPassword.value.length >= 8) {
-    inputPassword.setCustomValidity("");
+  if (inputPassword.value !== inputRepeatPassword.value) {
+    inputPassword.setCustomValidity("Пароли разные")
+    inputPassword.reportValidity();
+    return;
+  }
+  if (inputPassword.value.length < 8) {
+    inputPassword.setCustomValidity("Пароли короткие")
+    inputPassword.reportValidity();
+    return;
+  }
     const formData = new FormData(formModal);
     const obj = Object.fromEntries(formData.entries());
+    obj.createdOn = new Date();
+    user = obj;
     console.log(obj);
+    console.log(user);
+    formModal.reset();
 
     modal.classList.remove("modal-showed");
     overlay.classList.remove("overlay-showed");
-  } else {
-    e.preventDefault();
-    inputPassword.setCustomValidity("Пароли разные или короткие")
-    inputPassword.reportValidity();
-  }
+});
+inputPassword.addEventListener("input", () => {
+  inputPassword.setCustomValidity("");
 });
