@@ -7,6 +7,7 @@ const formModal = document.querySelector(".modal-form");
 const modalInput = document.querySelector(".modal-input");
 const birthDateInput = document.getElementById("form-birthdate");
 const inputPassword = document.getElementById("form-password");
+const inputPassword2 = document.getElementById("form-repeat-password")
 const inputRepeatPassword = document.getElementById("form-repeat-password");
 const inputSub = document.querySelector(".footer-subscribe-input");
 
@@ -61,4 +62,7 @@ formModal.addEventListener("submit", (e) => {
 });
 inputPassword.addEventListener("input", () => {
   inputPassword.setCustomValidity("");
+});
+inputPassword2.addEventListener("input", () => {
+  inputPassword2.setCustomValidity("");
 });
