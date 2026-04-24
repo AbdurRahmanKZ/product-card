@@ -1,4 +1,4 @@
-const formEmail = document.querySelector(".footer-top-center-bar-form");
+const formEmail = document.querySelector(".footer-subscribe-form");
 const openRegisterBtn = document.querySelector(".register-button");
 const closeRegisterBtn = document.querySelector(".close-register-button");
 const overlay = document.querySelector(".overlay")
@@ -8,7 +8,7 @@ const modalInput = document.querySelector(".modal-input");
 const birthDateInput = document.getElementById("form-birthdate");
 const inputPassword = document.getElementById("form-password");
 const inputRepeatPassword = document.getElementById("form-repeat-password");
-const inputSub = document.querySelector(".footer-top-center-bar-input");
+const inputSub = document.querySelector(".footer-subscribe-input");
 
 formEmail.addEventListener("submit", (e) => {
   e.preventDefault();
