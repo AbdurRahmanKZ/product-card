@@ -154,16 +154,16 @@ color: #515076;
   margin-top: 50px;
   color: #FFFFFF;
 }
-.footer-top {
+.footer-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 85px 75px 162px 84px;
 }
-.footer-top-left-bar {
+.footer-about-container {
   width: 409px;
 }
-.footer-top-left-bar-title {
+.footer-about-title {
   margin: 0;
   font-weight: 800;
   font-size: 28px;
@@ -172,7 +172,7 @@ color: #515076;
   text-transform: capitalize;
   color: #FFFFFF;
 }
-.footer-top-left-bar-text {
+.footer-about-text {
   margin: 16px 0 40px 0;
   font-weight: 400;
   font-size: 18px;
@@ -181,21 +181,21 @@ color: #515076;
   text-transform: capitalize;
  
 }
-.footer-top-left-bar-img-tg {
+.footer-about-tg-icon {
 margin-right: 15px;
 }
-.footer-top-left-bar-img-vk {
+.footer-about-vk-icon {
 
 }
-.footer-top-center-bar {
+.footer-subscribe-bar {
 
 }
-.footer-top-center-bar-title {
+.footer-subscribe-title {
   margin: 0 39px 13px 88px;
   font-weight: 400;
   font-size: 24px;
 }
-.footer-top-center-bar-form {
+.footer-subscribe-form {
   width: 477px;
   display: flex;
   align-items: center;
@@ -203,19 +203,19 @@ margin-right: 15px;
   background-color: #FFFFFF;
   border-radius: 10px;
 }
-.footer-top-center-bar-input {
+.footer-subscribe-input {
   flex: 1;
   border: none;
   font-weight: 500;
   font-size: 14px;
 }
-.footer-top-center-bar-line {
+.footer-subscribe-line {
   width: 1px;
   height: 18px;
   margin: 0 16px;
   background-color: black;
 }
-.footer-top-center-bar-input-button {
+.footer-subscribe-input-button {
   width: max-content;
   color: #000000;
   font-weight: 500;
@@ -223,17 +223,17 @@ margin-right: 15px;
   border: none;
   background-color: white;
 }
-.footer-top-right-nav-bar {
+.footer-nav {
   display: flex;
   flex-direction: column;
   width: 178px;
 }
-.footer-top-right-nav-bar-title {
+.footer-nav-title {
  margin: 0 0 23px 0;
    font-weight: 500;
   font-size: 20px;
 }
-.footer-top-right-nav-bar-ul {
+.footer-nav-ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -242,7 +242,7 @@ margin-right: 15px;
   margin: 0;
   padding: 0;
 }
-.footer-top-right-nav-bar-ul-link {
+.footer-nav-link {
   text-decoration: none;
   color: #FFFFFF;
   font-weight: 400;
