@@ -287,6 +287,8 @@ body {
 
 .footer-bottom-link {
   text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .overlay {
