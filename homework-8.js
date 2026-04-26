@@ -1,4 +1,4 @@
-import { products } from '/product-card/products.js';
+import { products } from './products.js';
 const productTemplate = document.getElementById('product-card-template');
 const productContainer = document.querySelector('.catalog');
 
