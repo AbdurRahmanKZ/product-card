@@ -28,6 +28,7 @@ export default class Form {
       const formData = new FormData(this.form);
       const obj = Object.fromEntries(formData.entries());
       console.log(obj);
+      this.resetForm();
       this.onSucces();
     });
   }
@@ -38,6 +39,7 @@ export default class Form {
         const formData = new FormData(this.form);
         const obj = Object.fromEntries(formData.entries());
         console.log(obj);
+        this.resetForm();
       }
     });
   }
@@ -49,20 +51,10 @@ export default class Form {
       this.password2.setCustomValidity("");
     })
   }
-}
-
-export class FormEmail {
-  constructor(inputId) {
-    this.inputId = inputId;
+  isValid() {
+    return(this.form.checkValidity());
   }
-  submit() {
-    this.inputId.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (this.inputId.checkValidity()) {
-        const formData = new FormData(this.inputId);
-        const obj = Object.fromEntries(formData.entries());
-        console.log(obj);
-      }
-    });
+  resetForm() {
+    this.form.reset();
   }
 }

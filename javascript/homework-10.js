@@ -15,6 +15,7 @@ const modalClass = new Modal(
   modal,
   closeRegisterBtn,
   openRegisterBtn,
+  overlay
 );
 const formEmailClass = new Form(formEmail);
 const formClass = new Form(
