@@ -2,6 +2,7 @@ import "./script.js";
 import "./products.js";
 import "./comments.js";
 import "./modal.js";
+import "./form.js";
 import "./cars.js";
 import "./homework-5.js";
 import "./homework-6.js";
