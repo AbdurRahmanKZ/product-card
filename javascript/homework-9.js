@@ -1,3 +1,4 @@
+//disabled
 const formEmail = document.querySelector(".footer-subscribe-form");
 const openRegisterBtn = document.querySelector(".register-button");
 const closeRegisterBtn = document.querySelector(".close-register-button");
