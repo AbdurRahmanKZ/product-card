@@ -64,45 +64,47 @@
     <hr class="footer-bottom-line">
     <a href="" class="footer-bottom-link">www.product-cards.com ©all right reserved</a>
   </footer>
-  <div class="overlay"></div>
-  <button class="register-button">Регистрация</button>
-  <div class="modal">
-    <div class="close-register-button">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
+  <div class="modal-wrapper">
+    <button class="register-button">Регистрация</button>
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="close-register-button">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 class="modal-title">Регистрация</h3>
+      <form class="modal-form">
+        <label class="modal-label" for="form-name">
+          Имя:
+        </label>
+        <input class="modal-input" name="name" type="text" id="form-name" placeholder="введи имя" required>
+        <label class="modal-label" for="form-surname">
+          Фамилия:
+        </label>
+        <input class="modal-input" name="surname" type="text" id="form-surname" placeholder="введи фамилию" required>
+        <label class="modal-label" for="form-birthdate">
+          Дата Рождения:
+        </label>
+        <input class="modal-input" name="birthdate" type="date" min="1940-01-01" id="form-birthdate"
+          placeholder="введи дату рождения" required>
+        <label class="modal-label" for="form-login">
+          Логин:
+        </label>
+        <input class="modal-input" name="login" type="text" id="form-login" placeholder="введи логин" required>
+        <label class="modal-label" for="form-password">
+          Пароль:
+        </label>
+        <input class="modal-input" name="password" type="password" id="form-password" placeholder="введи пароль" required>
+        <label class="modal-label" for="form-repeat-password">
+          Повторение пароля:
+        </label>
+        <input class="modal-input" name="repeatPassword" type="password" id="form-repeat-password"
+          placeholder="введи повтор пороля" required>
+        <button class="form-button">Зарегестрироваться</button>
+      </form>
     </div>
-    <h3 class="modal-title">Регистрация</h3>
-    <form class="modal-form">
-      <label class="modal-label" for="form-name">
-        Имя:
-      </label>
-      <input class="modal-input" name="name" type="text" id="form-name" placeholder="введи имя" required>
-      <label class="modal-label" for="form-surname">
-        Фамилия:
-      </label>
-      <input class="modal-input" name="surname" type="text" id="form-surname" placeholder="введи фамилию" required>
-      <label class="modal-label" for="form-birthdate">
-        Дата Рождения:
-      </label>
-      <input class="modal-input" name="birthdate" type="date" min="1940-01-01" id="form-birthdate"
-        placeholder="введи дату рождения" required>
-      <label class="modal-label" for="form-login">
-        Логин:
-      </label>
-      <input class="modal-input" name="login" type="text" id="form-login" placeholder="введи логин" required>
-      <label class="modal-label" for="form-password">
-        Пароль:
-      </label>
-      <input class="modal-input" name="password" type="password" id="form-password" placeholder="введи пароль" required>
-      <label class="modal-label" for="form-repeat-password">
-        Повторение пароля:
-      </label>
-      <input class="modal-input" name="repeatPassword" type="password" id="form-repeat-password"
-        placeholder="введи повтор пороля" required>
-      <button class="form-button">Зарегестрироваться</button>
-    </form>
   </div>
   <img src="images/background-flower.png" alt="background-flower" class="background">
   <script src="./javascript/main.js" type="module"></script>

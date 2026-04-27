@@ -1,9 +1,14 @@
 export default class Modal {
-  constructor(idModal, closeButtonId, openButtonId, overlayId) {
-    this.modal = idModal;
-    this.closeButton = closeButtonId;
-    this.openButton = openButtonId;
-    this.overlay = overlayId;
+  constructor(modalWrapper) {
+    this.modalWrapper = modalWrapper;
+    this.modal = this.modalWrapper.querySelector(".modal");
+    this.overlay = this.modalWrapper.querySelector(".overlay");
+    this.openButton = this.modalWrapper.querySelector(".register-button");
+    this.closeButton = this.modalWrapper.querySelector(".close-register-button");
+  }
+  quickCheck() {
+    console.log(this.modalWrapper);
+console.log(this.openButton);
   }
   openModal() {
     this.modal.classList.add("modal-showed");
@@ -15,9 +20,9 @@ export default class Modal {
   }
   checkOpen() {
     if (this.modal.classList.contains("modal-showed")) {
-      console.log("modal showed");
+      return true;
     } else {
-      console.log("modal-closed");
+      return false;
     }
   }
   clickModalCloseButton() {

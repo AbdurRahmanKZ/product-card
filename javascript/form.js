@@ -1,11 +1,10 @@
 export default class Form {
-  constructor(formId, passwordId, password2Id, onSucces) {
+  constructor(formId) {
     this.form = formId;
-    this.password = passwordId;
-    this.password2 = password2Id;
-    this.onSucces = onSucces;
+    this.password = this.form.querySelector("#form-password");
+    this.password2 = this.form.querySelector("#form-repeat-password");
   }
-  submitModal() {
+  submitModal(onSucces) {
     this.form.addEventListener("submit", (e) => {
       console.log("submit works");
       e.preventDefault();
@@ -29,7 +28,7 @@ export default class Form {
       const obj = Object.fromEntries(formData.entries());
       console.log(obj);
       this.resetForm();
-      this.onSucces();
+      onSucces();
     });
   }
   submit() {
