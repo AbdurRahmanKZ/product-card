@@ -4,3 +4,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.card {
+  background: rgb(251, 174, 174);
+  width: 350px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.users-catalog {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
