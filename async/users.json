@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Arman",
+    "surname": "Titanov",
+    "email": "ArmanT@mail.com",
+    "age": 23
+  },
+  {
+    "id": 2,
+    "name": "Artem",
+    "surname": "Michailov",
+    "email": "MichailovA@mail.com",
+    "age": 41
+  },
+  {
+    "id": 3,
+    "name": "Vasyliy",
+    "surname": "Orlov",
+    "email": "Vasya@mail.com",
+    "age": 18
+  },
+  {
+    "id": 4,
+    "name": "Ben",
+    "surname": "Henderson",
+    "email": "Ghostty@mail.com",
+    "age": 38
+  },
+  {
+    "id": 5,
+    "name": "Britny",
+    "surname": "Spears",
+    "email": "Zakroy@mail.com",
+    "age": 23
+  }
+]
