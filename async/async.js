@@ -6,6 +6,8 @@ const deleteChosenCardBtn = document.querySelector("#delete-chosen-button");
 const deleteChosenCardInput = document.querySelector("#delete-chosen-input");
 const getAllCardsBtn = document.querySelector("#get-all-button");
 
+let users
+
 function renderUsers(users) {
   containerUser.innerHTML = "";
   if (!Array.isArray(users) || users.length === 0) {
@@ -24,17 +26,22 @@ function renderUsers(users) {
   status.textContent = ""
 }
 
-let users
+function loadAllCardsToVar() {
+  const savedUsers = JSON.parse(localStorage.getItem("users"));
+  users = savedUsers;
+}
+
+function init() {
+  setTimeout(() => {
+    loadAllCardsToVar();
+    renderUsers(users);
+  }, 1000);
+}
 
 async function loadAllCardsToLocal() {
   const response = await fetch("./users.json");
   const users = await response.json();
   localStorage.setItem("users", JSON.stringify(users));
-}
-
-function loadAllCardsToVar() {
-  const savedUsers = JSON.parse(localStorage.getItem("users"));
-  users = savedUsers;
 }
 
 async function loadAllCards() {
@@ -44,12 +51,6 @@ async function loadAllCards() {
     loadAllCardsToVar();
     renderUsers(users);
     status.textContent = ""
-  }, 1000);
-}
-async function init() {
-  setTimeout(async () => {
-    await loadAllCardsToVar();
-    renderUsers(users);
   }, 1000);
 }
 
