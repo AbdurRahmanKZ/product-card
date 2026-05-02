@@ -31,8 +31,15 @@ function loadAllCardsToVar() {
   users = savedUsers;
 }
 
-function init() {
+async function ifFirstLoad() {
+  if (users === null) {
+    await loadAllCardsToLocal();
+  }
+}
+
+async function init() {
   setTimeout(() => {
+    await ifFirstLoad();
     loadAllCardsToVar();
     renderUsers(users);
   }, 1000);
