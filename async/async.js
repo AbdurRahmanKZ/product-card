@@ -21,6 +21,7 @@ function renderUsers(users) {
     userClone.querySelector(".user-age").textContent = "age: " + user.age + " years"
     containerUser.appendChild(userClone);
   });
+  status.textContent = ""
 }
 
 let users
@@ -43,19 +44,22 @@ async function loadAllCards() {
     loadAllCardsToVar();
     renderUsers(users);
     status.textContent = ""
-  }, 3000);
+  }, 1000);
 }
 async function init() {
   setTimeout(async () => {
     await loadAllCardsToVar();
     renderUsers(users);
-  }, 3000);
+  }, 1000);
 }
 
 deleteAllCardsBtn.addEventListener("click", () => {
   localStorage.setItem("users", JSON.stringify([]));
   users = [];
-  renderUsers(users);
+  status.textContent ="удаляем"
+  setTimeout(() => {
+    renderUsers(users);
+  }, 1000);
 });
 
 deleteChosenCardBtn.addEventListener("click", () => {
