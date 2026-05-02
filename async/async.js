@@ -38,7 +38,7 @@ async function ifFirstLoad() {
 }
 
 async function init() {
-  setTimeout(() => {
+  setTimeout(async() => {
     await ifFirstLoad();
     loadAllCardsToVar();
     renderUsers(users);
