@@ -7,10 +7,11 @@ const deleteChosenCardInput = document.querySelector("#delete-chosen-input");
 const getAllCardsBtn = document.querySelector("#get-all-button");
 
 let users;
-let userFromFile;
+let usersFromFile;
 
 function setLocal(users) {
   localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem("users-backup", JSON.stringify(users));
 }
 
 function loadLocal() {
@@ -24,14 +25,15 @@ async function loadFentch() {
     if (!response.ok) {
       throw new Error("Ошибка загрузки файла")
     }
-    const usersFromFile = await response.json();
-    if (!Array.isArray(usersFromFile)) {
+    const users = await response.json();
+    if (!Array.isArray(users)) {
       throw new Error("Данные не являются массивом");
     }
-    if (usersFromFile.length === 0) {
+    if (users.length === 0) {
       throw new Error("Файл пустой");
     }
-    return usersFromFile;
+    usersFromFile = users;
+    return users;
   } catch (err) {
     status.textContent = err.message;
   }
@@ -63,7 +65,7 @@ function renderUsers(users) {
 
 async function onLoad() {
   const savedUsers = loadLocal();
-  if (Array.isArray(savedUsers)) {
+  if (Array.isArray(savedUsers) && savedUsers.length > 0) {
     users = savedUsers;
     renderUsers(users);
     return;
@@ -96,20 +98,24 @@ deleteChosenCardBtn.addEventListener("click", () => {
 
 getAllCardsBtn.addEventListener("click", async () => {
   status.textContent = "Данные загружаются";
-  userFromFile = await loadFentch();
-  setTimeout(() => {
-    if (JSON.stringify(userFromFile) === JSON.stringify(users)) {
-      status.textContent = "уже загружено"
-      setTimeout(() => {
-        status.textContent = ""
-      }, 1000);
-      return;
-    } else {
-      users = userFromFile;
-      localStorage.setItem("users", JSON.stringify(users));
-      renderUsers(users);
+  const savedUsers = loadLocal();
+  const usersBackup = JSON.parse(localStorage.getItem("users-backup"));
+  if (!Array.isArray(usersBackup) || usersBackup.length === 0) {
+    setTimeout(() => {
+      status.textContent = "нет данных"
+    }, 1000);
+    return;
     }
-  }, 1000);
+  if (Array.isArray(users) && usersBackup.length === users.length){
+    status.textContent = "уже загружено"
+    setTimeout(() => {
+      status.textContent = ""
+    }, 1000);
+    return;
+  }
+  users = usersBackup;
+  setLocal(users);
+  renderUsers(users);
 });
 
 onLoad();
